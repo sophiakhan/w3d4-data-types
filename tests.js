@@ -45,34 +45,40 @@ function convertCaseUpper(value) {
 
 avow('convertCaseUpper returns an uppercase string', convertCaseUpper('i am shouting!') === 'I AM SHOUTING!');
 
-function repeatWord(value) {
-    var value = value.repeat(2);d
+function repeatWord(value, n) {
+    return value.repeat(n);
 }
 
 avow('repeatWord returns a repeated word', repeatWord('Knock.', 2) === 'Knock.Knock.');
 
-function sliceWord() {
+function sliceWord(value, n, n2) {
+    var value = 'I love pizza!';
+    return value.slice(7,12);
 }
 
 avow('sliceWord returns a slice of a word', sliceWord('I love pizza!', 7, 12) === 'pizza');
 
-function splitWord() {
+function splitWord(value, splitCreator) {
+    return value.split(splitCreator);
 }
 
 avow('splitWord returns an array', splitWord('US,CA,MX,JP,UK', ',').length === 5);
 
-function whereIsCarmen() {
+function whereIsCarmen(value, name) {
+    return value.indexOf(name);
 }
 
 avow('whereIsCarmen returns Carmen\'s position', whereIsCarmen('In the rainy Panama Canal, Carmen Sandiego silently slipped aboard a rusty shipping container bound for New Zealand.', 'Carmen') === 27);
 
-function doesItContain() {
+function doesItContain(value, findMe) {
+    return value.includes(findMe);
 }
 
 avow('doesItContain returns true if it finds a match', doesItContain('The Children\'s Museum Of Indianapolis', 'Museum') === true);
 
 // Regular Expressions
-function extractZipCode() {
+function extractZipCode(zipCode) {
+    return zipCode.match()
 }
 
 avow('extractZipCode returns a zip code', extractZipCode('My zip code was 46240.') === '46240');
